@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+   Security: exclude the local app-state SharedPreferences (which mirrors
+   Play Billing entitlement status) from Auto Backup / device transfer, so a
+   backup taken on one device/account cannot be restored elsewhere to spoof
+   a premium entitlement. Entitlement is always re-verified against Play
+   Billing on launch (see BillingManager), this is defense-in-depth only.
+-->
+<full-backup-content>
+    <exclude domain="sharedpref" path="qr_prefs.xml" />
+</full-backup-content>

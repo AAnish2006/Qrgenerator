@@ -1,0 +1,6 @@
+{
+  "name": "QR Generator & Reader",
+  "description": "A sleek, feature-rich QR Code scanner and dynamic generator. Scan, create, customize, and manage scans and generation limits with free and premium options.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

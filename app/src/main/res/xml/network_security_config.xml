@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  Security hardening: block all cleartext (HTTP) traffic app-wide. Any future
+  backend calls (auth refresh, dynamic-QR redirect service, receipt
+  verification, etc.) must be served over HTTPS. There is no exception domain
+  list here on purpose — add one only for a specific, justified debug case.
+-->
+<network-security-config>
+    <base-config cleartextTrafficPermitted="false">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>
